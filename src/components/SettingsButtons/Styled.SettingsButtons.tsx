@@ -1,54 +1,57 @@
 import { styled } from "@mui/material";
 
-interface IStyledSettingsButtons{
+interface IStyledSettingsButtons {
   displaysettingisactive: string
 }
 
 export const StyledSettingsButtons = styled("div")<IStyledSettingsButtons>(({ displaysettingisactive, ...props }) => `
+  position: fixed;
+  display: flex;
   color: ${props.theme.palette.primary.contrastText};
-  position: absolute;
-  right: ${displaysettingisactive == 'true' ? '190px':'10px'};
+  right: ${displaysettingisactive == 'true' ? '10px' : '-165px'};
   top: 100px;
 
-  .setting-button {
-    z-index: 999;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    border-radius: 99px;
-    box-shadow: ${props.theme.shadows[3]};
-
-    & + .setting-button {
-      margin-top: 10px;
-    }
-
-    .settings-icon,
-    .icon-datkmode {
-      font-size: 1.3rem;
-    }
-    .settings-icon {
-      animation: fa-spin 2s infinite linear;
-      @keyframes fa-spin {
-        0% {
-          -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  .buttons{
+    .setting-button {
+      z-index: 997;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      border-radius: 99px;
+      box-shadow: ${props.theme.shadows[3]};
+  
+      & + .setting-button {
+        margin-top: 10px;
+      }
+  
+      .settings-icon,
+      .icon-datkmode {
+        font-size: 1.3rem;
+      }
+      .settings-icon {
+        animation: fa-spin 2s infinite linear;
+        @keyframes fa-spin {
+          0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
         }
       }
-    }
+
+  }
   }
 `);
 
 export const StyledMainColorTheme = styled("div")`
-  position: absolute;
-  left: 50px;
+  margin-left: 15px;
   top: ${(props) => props.theme.spacing(1.1)};
   box-shadow: ${(props) => props.theme.shadows[3]};
   border-radius: 5px;
