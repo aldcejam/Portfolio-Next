@@ -6,7 +6,7 @@ import { StyledIndex } from '../styles/Styled.index'
 const Home: NextPage = () => {
   return (
     <StyledIndex>
-      fsd
+      
     </StyledIndex>
   )
 }
