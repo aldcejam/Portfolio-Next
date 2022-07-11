@@ -1,0 +1,19 @@
+import { styled } from "@mui/material";
+
+export const StyledMainProfileRounded = styled('div')`
+    width: clamp(270px, 30vw, 340px);
+    height: clamp(270px, 30vw, 340px);
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: ${(props)=> props.theme.shadows[1]};
+    div{
+        box-shadow: ${(props)=> props.theme.shadows[3]};
+        overflow: hidden;
+        border-radius: 1000px;
+        width: clamp(240px, 28vw, 310px);
+        height: clamp(240px, 28vw, 310px);
+        position: relative;
+    }
+`

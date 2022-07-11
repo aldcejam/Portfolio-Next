@@ -23,12 +23,20 @@ export const LightTheme = (mainColor:string) => {
       },
       text: {
         /* title */
-        primary: "#4D4D4D",
+        primary: "#000000",
         /* Subtitle */
-        secondary: "#575757",
+        secondary: "#666666",
       },
     },
-
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 768,
+        lg: 1200,
+        xl: 1536,
+      },
+    },
     shadows: [
       "none",
       /* inner-shadow */

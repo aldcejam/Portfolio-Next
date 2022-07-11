@@ -22,9 +22,18 @@ export const DarkTheme = (name: any) => {
       },
       text: {
         /* title */
-        primary: "#4D4D4D",
+        primary: "#ffffff",
         /* Subtitle */
-        secondary: "#575757",
+        secondary: "#666666",
+      },
+    },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 768,
+        lg: 1200,
+        xl: 1536,
       },
     },
     shadows: [
@@ -32,7 +41,7 @@ export const DarkTheme = (name: any) => {
       /* inner-shadow */
       "inset 3px 3px 3px #222327, inset -3px -3px 3px #363636",
       /* inner-shadow-0 */
-      "inset 3px 3px 3px #222327, inset 3px 3px 3px #363636",
+      "inset 3px 3px 3px #222327, inset 3px 3px 3px #222327",
       /* outer-shadow */
       "3px 3px 3px #222327, -3px -3px 3px #363636",
       /* outer-shadow-0 */

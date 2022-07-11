@@ -6,6 +6,7 @@ interface IStyledSettingsButtons {
 
 export const StyledSettingsButtons = styled("div")<IStyledSettingsButtons>(({ displaysettingisactive, ...props }) => `
   position: fixed;
+  z-index: 999;
   display: flex;
   color: ${props.theme.palette.primary.contrastText};
   right: ${displaysettingisactive == 'true' ? '10px' : '-165px'};
