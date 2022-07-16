@@ -1,6 +1,6 @@
-import { Modal } from "@mui/material"
 import { useState } from "react"
-import StyledMenuBurguer from "./Styled.MenuBurguer"
+import PagesRedirectMenu from "../PagesRedirectModal/PagesRedirectModal"
+import { StyledMenuBurguer } from "./Styled.MenuBurguer"
 
 interface IMenuBurguer {
     menuisactive: boolean
@@ -9,12 +9,12 @@ interface IMenuBurguer {
 
 const MenuBurguer = ({ menuisactive, setmenuisative }: IMenuBurguer) => {
 
-    const [modalMenuBurguer, setmModalMenuBurguer] = useState(false)
+    const [MenuBurguerIsActive, setMenuBurguerIsActive] = useState(false)
 
-    const ToggleMenuBurguer = ()=>{
+    const ToggleMenuBurguer = () => {
         menuisactive ? setmenuisative(false) : setmenuisative(true)
-        modalMenuBurguer ? setmModalMenuBurguer(false) : setmModalMenuBurguer(true)
-        
+        MenuBurguerIsActive ? setMenuBurguerIsActive(false) : setMenuBurguerIsActive(true)
+
     }
 
     return (
@@ -24,13 +24,7 @@ const MenuBurguer = ({ menuisactive, setmenuisative }: IMenuBurguer) => {
                 <div className="line"></div>
                 <div className="line"></div>
             </StyledMenuBurguer>
-            <Modal
-                sx={{zIndex:2}}
-                open={modalMenuBurguer}
-            >
-                <div></div>
-                
-            </Modal>
+            <PagesRedirectMenu menuBurguerIsActive={MenuBurguerIsActive}/>
         </>
 
     )

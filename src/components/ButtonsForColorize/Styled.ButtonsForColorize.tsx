@@ -1,12 +1,12 @@
 import { styled } from "@mui/material";
 
-interface IStyledSettingsButtons {
+interface IStyledButtonsForColorize {
   displaysettingisactive: string
 }
 
-export const StyledSettingsButtons = styled("div")<IStyledSettingsButtons>(({ displaysettingisactive, ...props }) => `
+export const StyledButtonsForColorize = styled("div")<IStyledButtonsForColorize>(({ displaysettingisactive, ...props }) => `
   position: fixed;
-  z-index: 999;
+  z-index: 500;
   display: flex;
   color: ${props.theme.palette.primary.contrastText};
   right: ${displaysettingisactive == 'true' ? '10px' : '-165px'};

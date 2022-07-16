@@ -4,7 +4,7 @@ interface IStyledMenuBurguer {
     menuisactive: string
 }
 
-const StyledMenuBurguer = styled('div')<IStyledMenuBurguer>(({ menuisactive, ...props }) => `
+export const StyledMenuBurguer = styled('div')<IStyledMenuBurguer>(({ menuisactive, ...props }) => `
     z-index: 999;
     width: 40px;
     height: 40px;
@@ -39,7 +39,5 @@ const StyledMenuBurguer = styled('div')<IStyledMenuBurguer>(({ menuisactive, ...
         
     }
     
-    
 `)
 
-export default StyledMenuBurguer

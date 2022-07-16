@@ -1,11 +1,11 @@
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useThemeContext } from '../../contexts/ThemeContext';
 import DarkModeButton from '../DarkModeButton/DarkModeButton';
-import { StyledMainColorTheme, StyledSettingsButtons } from './Styled.SettingsButtons';
 import { TYMainColor } from '../../contexts/ThemeContext';
 import { useState } from 'react';
+import { StyledButtonsForColorize, StyledMainColorTheme } from './Styled.ButtonsForColorize';
 
-const SettingsButtons = () => {
+const ButtonsForColorize = () => {
 
     const { MainColorModifier } = useThemeContext();
 
@@ -22,7 +22,7 @@ const SettingsButtons = () => {
     }
 
     return (
-        <StyledSettingsButtons displaysettingisactive={displaySettingIsActive.toString()}>
+        <StyledButtonsForColorize displaysettingisactive={displaySettingIsActive.toString()}>
             <div className='buttons'>
                 <div onClick={() => ToggleDisplaySettings()} className='hover-in-shadow setting-button'>
                     <SettingsIcon className='settings-icon' />
@@ -41,8 +41,8 @@ const SettingsButtons = () => {
                     <div className='color5 color' onClick={() => SelectThemeMainColor('#cc3a3b')}></div>
                 </div>
             </StyledMainColorTheme>
-        </StyledSettingsButtons>
+        </StyledButtonsForColorize>
     )
 }
 
-export default SettingsButtons
+export default ButtonsForColorize

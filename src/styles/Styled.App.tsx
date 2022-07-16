@@ -1,7 +1,8 @@
 import { styled } from "@mui/material";
 
-export const StyledGlobal = styled('div')` 
-    height: 100vh;
+export const StyledGlobal = styled('div')`
+    padding-bottom: 20px;
+    min-height: 100vh;
     background-color: ${(props) => props.theme.palette.background.default};
 
     .hover-in-shadow{
@@ -25,8 +26,11 @@ export const StyledGlobal = styled('div')`
             z-index:-1;
     }
 }
-` 
+`
 export const Container = styled('div')`
     width: min(80vw, 1000px);
     margin: auto;
+    ${(props) => props.theme.breakpoints.down('md')}{
+        width: min(90vw, 1000px);
+    }
 `
