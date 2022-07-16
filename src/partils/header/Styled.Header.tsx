@@ -5,6 +5,7 @@ export const StyledHeader = styled('header')`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 0 0;
 `
 export const StyledLog = styled('header')`

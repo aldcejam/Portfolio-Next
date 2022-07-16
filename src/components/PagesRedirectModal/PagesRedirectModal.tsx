@@ -4,9 +4,10 @@ import { ModalMenuBurguer } from "./Styled.PagesRedirectMenu";
 
 interface IPagesRedirectMenu {
     menuBurguerIsActive: boolean
+    ToggleMenuBurguer: ()=> void
 }
 
-const PagesRedirectMenu = ({ menuBurguerIsActive }: IPagesRedirectMenu) => {
+const PagesRedirectMenu = ({ menuBurguerIsActive,ToggleMenuBurguer }: IPagesRedirectMenu) => {
     return (
         <Modal
             sx={{ zIndex: 900}}
@@ -15,16 +16,16 @@ const PagesRedirectMenu = ({ menuBurguerIsActive }: IPagesRedirectMenu) => {
         >
             <ModalMenuBurguer>
                 <div>
-                    <div>
+                    <div onClick={ToggleMenuBurguer}>
                         <RedirectButton link="/" textButton="Home" />
                     </div>
-                    <div>
-                        <RedirectButton link="/" textButton="Projetos" />
+                    <div onClick={ToggleMenuBurguer}>
+                        <RedirectButton link="/projetos" textButton="Projetos" />
                     </div>
-                    <div>
+                    <div onClick={ToggleMenuBurguer}>
                         <RedirectButton link="/" textButton="Sobre" />
                     </div>
-                    <div>
+                    <div onClick={ToggleMenuBurguer}>
                         <RedirectButton link="/" textButton="Contato" />
                     </div>
                 </div>

@@ -4,15 +4,13 @@ import { StyledHeader, StyledLog } from "./Styled.Header";
 
 const Header = () => {
 
-    const [menuisative, setmenuisative] = useState(false)
-
     return (
 
         <StyledHeader>
             <StyledLog>
                 W
             </StyledLog>
-            <MenuBurguer  menuisactive={menuisative} setmenuisative={setmenuisative} />
+            <MenuBurguer  />
         </StyledHeader>
     )
 }

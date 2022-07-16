@@ -2,29 +2,23 @@ import { useState } from "react"
 import PagesRedirectMenu from "../PagesRedirectModal/PagesRedirectModal"
 import { StyledMenuBurguer } from "./Styled.MenuBurguer"
 
-interface IMenuBurguer {
-    menuisactive: boolean
-    setmenuisative: any
-}
+const MenuBurguer = () => {
 
-const MenuBurguer = ({ menuisactive, setmenuisative }: IMenuBurguer) => {
-
-    const [MenuBurguerIsActive, setMenuBurguerIsActive] = useState(false)
+    const [menuBurguerIsActive, setMenuBurguerIsActive] = useState(false)
 
     const ToggleMenuBurguer = () => {
-        menuisactive ? setmenuisative(false) : setmenuisative(true)
-        MenuBurguerIsActive ? setMenuBurguerIsActive(false) : setMenuBurguerIsActive(true)
+        menuBurguerIsActive ? setMenuBurguerIsActive(false) : setMenuBurguerIsActive(true)
 
     }
 
     return (
         <>
-            <StyledMenuBurguer className="hover-in-shadow" menuisactive={menuisactive.toString()} onClick={() => ToggleMenuBurguer()}>
+            <StyledMenuBurguer className="hover-in-shadow" menuisactive={menuBurguerIsActive.toString()} onClick={() => ToggleMenuBurguer()}>
                 <div className="line"></div>
                 <div className="line"></div>
                 <div className="line"></div>
             </StyledMenuBurguer>
-            <PagesRedirectMenu menuBurguerIsActive={MenuBurguerIsActive}/>
+            <PagesRedirectMenu menuBurguerIsActive={menuBurguerIsActive} ToggleMenuBurguer={ToggleMenuBurguer}/>
         </>
 
     )

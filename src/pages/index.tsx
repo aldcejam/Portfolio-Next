@@ -3,7 +3,7 @@ import Head from 'next/head'
 import MainProfileRounded from '../components/MainProfile/MainProfile'
 import { RedirectButton } from '../components/RedirectButton/RedirectButton'
 import BackgroundGeometric from '../partils/BackgroundGeometric/BackgroundGeometric'
-import { PositionMainProfileRounded, StyledIndex } from '../styles/Styled.index'
+import { PositionMainProfileRounded, StyledPageIndex } from '../stylesPages/Styled.PageIndex'
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <title>HOME</title>
       </Head>
       <BackgroundGeometric />
-      <StyledIndex>
+      <StyledPageIndex>
         <PositionMainProfileRounded>
           <MainProfileRounded />
         </PositionMainProfileRounded>
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-      </StyledIndex>
+      </StyledPageIndex>
     </>
   )
 }

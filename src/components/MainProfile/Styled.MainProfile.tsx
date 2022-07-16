@@ -8,6 +8,7 @@ export const StyledMainProfileRounded = styled('div')`
     align-items: center;
     justify-content: center;
     box-shadow: ${(props)=> props.theme.shadows[1]};
+    cursor: auto;
     div{
         box-shadow: ${(props)=> props.theme.shadows[3]};
         overflow: hidden;

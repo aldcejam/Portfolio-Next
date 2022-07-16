@@ -1,6 +1,6 @@
 import { styled } from "@mui/material";
 
-export const StyledIndex = styled('div')` 
+export const StyledPageIndex = styled('div')` 
     position: relative;
 
     .presentation{
