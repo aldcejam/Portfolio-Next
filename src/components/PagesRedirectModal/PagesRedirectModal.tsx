@@ -1,5 +1,5 @@
 import { Modal } from "@mui/material";
-import { RedirectButton } from "../RedirectButton/RedirectButton";
+import { RedirectButton } from "../Buttons/RedirectButton/RedirectButton";
 import { ModalMenuBurguer } from "./Styled.PagesRedirectMenu";
 
 interface IPagesRedirectMenu {

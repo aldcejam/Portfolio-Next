@@ -1,6 +1,7 @@
 import { styled } from "@mui/material";
 
 export const BoxShadowHoverDefault = styled("div")`
+transition: all 0.3s linear;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;

@@ -1,6 +1,6 @@
 
 import Link from "next/link"
-import { BoxShadowHoverDefault } from "../BoxShadowDefaultHover/BoxShadowDefaultHover"
+import { BoxShadowHoverDefault } from "../../BoxShadowDefaultHover/BoxShadowDefaultHover"
 import { StyledRedirectButton } from "./Styled.RedirectButton"
 /* 
 interface IRedirectButton {

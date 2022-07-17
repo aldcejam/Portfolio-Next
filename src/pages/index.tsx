@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import MainProfileRounded from '../components/MainProfile/MainProfile'
-import { RedirectButton } from '../components/RedirectButton/RedirectButton'
+import { RedirectButton } from '../components/Buttons/RedirectButton/RedirectButton'
 import BackgroundGeometric from '../partils/BackgroundGeometric/BackgroundGeometric'
 import { PositionMainProfileRounded, StyledPageIndex } from '../stylesPages/Styled.PageIndex'
 

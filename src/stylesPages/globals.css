@@ -12,7 +12,10 @@ a {
 }
 
 * {
-  transition: all 0.3s linear;
+  transition: background-color 0.3s linear, color 1s linear;
   box-sizing: border-box;
 }
-
+button{
+  transition: background-color 0.3s linear, color 1s linear;
+  
+}

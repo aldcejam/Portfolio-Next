@@ -5,7 +5,7 @@ const MainProfileRounded = ()=>{
     return(
         <StyledMainProfileRounded>
             <div>
-                <Image src={'/profile-pic.png'} layout='fill' width={300} height={300}/>
+                <Image src={'/profile-pic.png'} layout='fill' />
             </div>
         </StyledMainProfileRounded>
     )
