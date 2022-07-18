@@ -14,7 +14,7 @@ const ProjectsCategorys = ({ category }: IProjectsCategorys) => {
         <>
             {category.map((category) => {
                 return (
-                    <BoxShadowHoverDefault>
+                    <BoxShadowHoverDefault key={category.categoryName}>
                         <StyledRedirectButton>
                             {category.categoryName}
                         </StyledRedirectButton>
