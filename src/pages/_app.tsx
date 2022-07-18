@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import { ThemeContextProvider } from '../contexts/ThemeContext'
 import { Container, StyledGlobal } from '../stylesPages/Styled.App'
 import Header from '../partils/header/Header'
-import ButtonsForColorize from '../components/ButtonsForColorize/ButtonsForColorize'
+import ButtonsForColorize from '../components/Buttons/ButtonsForColorize/ButtonsForColorize'
 
 
 

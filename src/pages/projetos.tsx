@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
-import ComunButton from '../components/Buttons/ComunButton/ComunButton'
 import StructureForProject from '../components/StructureForProject/StructureForProject'
 import { StyledPageProjetos } from '../stylesPages/Styled.PageProjetos'
 
@@ -111,6 +110,7 @@ const Projetos: NextPage = () => {
         <div className='projects-by-categorys'>
 
           <div className='categorys'>
+            ola mundo
             {
               onlyCategories.map((category) => {
                 return (

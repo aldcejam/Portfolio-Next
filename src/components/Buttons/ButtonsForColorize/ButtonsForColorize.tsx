@@ -1,7 +1,7 @@
 import SettingsIcon from '@mui/icons-material/Settings';
-import { useThemeContext } from '../../contexts/ThemeContext';
+import { useThemeContext } from '../../../contexts/ThemeContext';
 import DarkModeButton from '../DarkModeButton/DarkModeButton';
-import { TYMainColor } from '../../contexts/ThemeContext';
+import { TYMainColor } from '../../../contexts/ThemeContext';
 import { useState } from 'react';
 import { StyledButtonsForColorize, StyledMainColorTheme } from './Styled.ButtonsForColorize';
 

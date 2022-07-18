@@ -1,7 +1,6 @@
 import { styled } from "@mui/material";
 
 export const StyledDarkModeButton = styled('div')` 
-
     z-index: 999;
     width: 100%;
     height: 100%;

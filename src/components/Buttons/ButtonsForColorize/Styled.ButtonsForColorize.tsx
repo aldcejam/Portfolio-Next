@@ -11,6 +11,7 @@ export const StyledButtonsForColorize = styled("div")<IStyledButtonsForColorize>
   color: ${props.theme.palette.primary.contrastText};
   right: ${displaysettingisactive == 'true' ? '10px' : '-165px'};
   top: 100px;
+  transition: all 0.3s linear;
 
   .buttons{
     .setting-button {

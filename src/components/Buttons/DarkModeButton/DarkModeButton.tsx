@@ -1,4 +1,4 @@
-import { useThemeContext } from "../../contexts/ThemeContext"
+import { useThemeContext } from "../../../contexts/ThemeContext"
 import { StyledDarkModeButton } from "./Styled.DarkModeButton"
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
