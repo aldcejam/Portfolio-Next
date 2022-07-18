@@ -3,79 +3,18 @@ import Head from 'next/head'
 import { useState } from 'react'
 import StructureForProject from '../components/StructureForProject/StructureForProject'
 import { StyledPageProjetos } from '../stylesPages/Styled.PageProjetos'
-
+import { InsertedProjects } from '../InsertedProjects/InsertedProjects'
 
 
 
 const Projetos: NextPage = () => {
 
-  interface IProjeto {
-    title: string,
-    description: string,
-    projectCategory: string,
-    data: string,
-    client: string,
-    link: string,
-    technologies: string,
-    imageThumb: string,
-    images: Array<String>
-  }
-  interface IProjetos extends Array<IProjeto> { }
-
-  /* ============ coloque aqui seus projetos ============ */
-  const projetos: IProjetos = [
-    {
-      title: 'LPS Construção',
-      description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
-      projectCategory: 'LPS',
-      data: '2022',
-      client: 'Websocorro',
-      link: 'https://project-web-construction.vercel.app/',
-      technologies: 'ReactJs, NextJs, tailwind, sass',
-      imageThumb: '/trumb/project-1.png',
-      images: [
-        '/large/project-1/1.png',
-        '/large/project-1/2.png',
-        '/large/project-1/3.png'
-      ]
-    },
-    {
-      title: 'LPS Pousada',
-      description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
-      projectCategory: 'LPS',
-      data: '2022',
-      client: 'Websocorro',
-      link: 'https://project-web-construction.vercel.app/',
-      technologies: 'Html,css,js',
-      imageThumb: '/trumb/project-2.png',
-      images: [
-        '/large/project-2/1.png',
-        '/large/project-2/2.png',
-        '/large/project-2/3.png'
-      ]
-    },
-    {
-      title: 'LPS Poussa',
-      description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
-      projectCategory: 'next',
-      data: '2022',
-      client: 'Websocorro',
-      link: 'https://project-web-construction.vercel.app/',
-      technologies: 'Html,css,js',
-      imageThumb: '/trumb/project-2.png',
-      images: [
-        '/large/project-2/1.png',
-        '/large/project-2/2.png',
-        '/large/project-2/3.png'
-      ]
-    },
-  ]
 
 
   /* ============ Category ============ */
-
+  
   const categoriesRepeted: any = [];
-  const categoriesNoRepeated = projetos.filter(element => {
+  const categoriesNoRepeated = InsertedProjects.filter(element => {
     const isDuplicate = categoriesRepeted.includes(element.projectCategory);
 
     if (!isDuplicate) {
@@ -110,7 +49,6 @@ const Projetos: NextPage = () => {
         <div className='projects-by-categorys'>
 
           <div className='categorys'>
-            ola mundo
             {
               onlyCategories.map((category) => {
                 return (
@@ -129,7 +67,7 @@ const Projetos: NextPage = () => {
 
           <div className='projects'>
             {
-              projetos.map((projeto) => {
+              InsertedProjects.map((projeto) => {
                 if (projeto.projectCategory == categorysSelected || 'todos' == categorysSelected) {
                   return (
                     <StructureForProject key={projeto.title} projeto={projeto} />

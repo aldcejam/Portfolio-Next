@@ -31,6 +31,7 @@ export const StyledPageProjetos = styled('div')`
             
             .category-button{
                 button{
+                    cursor: pointer;
                     transition: all 0.3s linear;
                     border: none;
                     background-color: transparent;
@@ -38,6 +39,7 @@ export const StyledPageProjetos = styled('div')`
                     color: ${(props) => props.theme.palette.primary.contrastText};
                     padding: 10px 15px;
                     border-radius: 100px;
+                    text-transform: capitalize;
                 }
             }
             .category-button-active{
