@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             <RedirectButton link='/' textButton='Mais sobre mim' />
           </div>
           <div className='button-redirect-projetos'>
-            <RedirectButton link='/' textButton='Projetos' />
+            <RedirectButton link='/projetos' textButton='Projetos' />
           </div>
         </div>
 

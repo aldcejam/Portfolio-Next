@@ -1,11 +1,15 @@
 import { styled } from "@mui/material";
 
-export const StyledPageProjetos = styled('div')`
+interface IStyledPageProjetos{
+    stylebyupdate: string
+}
+
+export const StyledPageProjetos = styled('div')<IStyledPageProjetos>(({ stylebyupdate, ...props }) =>`
 
     .title-page{
         text-align: center;
         h1{
-            color: ${(props) => props.theme.palette.primary.main};
+            color: ${props.theme.palette.primary.main};
             font-size: 1.4rem;
             line-height: 0px;
             span{
@@ -17,7 +21,7 @@ export const StyledPageProjetos = styled('div')`
         h2{
             font-size: 1.8rem;
             text-transform: uppercase;
-            color: ${(props) => props.theme.palette.primary.contrastText};
+            color: ${props.theme.palette.primary.contrastText};
 
         }
     }
@@ -25,7 +29,9 @@ export const StyledPageProjetos = styled('div')`
         
         .categorys{
             display: flex;
-            gap: 10px;
+            transition: .5s;
+            gap: 50vw;
+            ${stylebyupdate == 'StyleForUpdate' ? 'gap: 10px;' : ''}
             justify-content: center;
             padding: 30px 0 40px;
             
@@ -36,7 +42,7 @@ export const StyledPageProjetos = styled('div')`
                     border: none;
                     background-color: transparent;
                     font-size: 1rem;
-                    color: ${(props) => props.theme.palette.primary.contrastText};
+                    color: ${props.theme.palette.primary.contrastText};
                     padding: 10px 15px;
                     border-radius: 100px;
                     text-transform: capitalize;
@@ -44,8 +50,8 @@ export const StyledPageProjetos = styled('div')`
             }
             .category-button-active{
                 button{
-                    box-shadow: ${(props) => props.theme.shadows[3]};
-                    color: ${(props) => props.theme.palette.primary.main};
+                    box-shadow: ${props.theme.shadows[3]};
+                    color: ${props.theme.palette.primary.main};
                     
                 }
             }
@@ -53,8 +59,16 @@ export const StyledPageProjetos = styled('div')`
         .projects{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 30px;
+            ${ props.theme.breakpoints.down('md')}{
+                grid-template-columns: repeat(2, 1fr);
+                
+            }
+            ${props.theme.breakpoints.down('sm')}{
+                grid-template-columns: repeat(1, 1fr);
+                
+            }
 
         }
     }
-`
+`)

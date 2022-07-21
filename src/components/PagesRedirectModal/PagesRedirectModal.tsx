@@ -8,10 +8,12 @@ interface IPagesRedirectMenu {
 }
 
 const PagesRedirectMenu = ({ menuBurguerIsActive,ToggleMenuBurguer }: IPagesRedirectMenu) => {
+    
     return (
         <Modal
             sx={{ zIndex: 900}}
             open={menuBurguerIsActive}
+            className='modal-bg'
             
         >
             <ModalMenuBurguer>

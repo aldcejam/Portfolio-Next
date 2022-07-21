@@ -8,6 +8,7 @@ export const ModalMenuBurguer = styled('div')`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    transition: 1s;
     div{
         div{
             &+div{
