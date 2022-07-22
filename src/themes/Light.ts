@@ -18,6 +18,7 @@ export const LightTheme = (mainColor:string) => {
         default: "#E8E8E8",
       },
       grey: {
+        "100": '#666666',
         "600": "#BCBCBC",
         "900": "#D6D6D6",
       },

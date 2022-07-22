@@ -1,6 +1,7 @@
 import { styled } from "@mui/material";
 
 export const StyledGlobal = styled('div')`
+    
     padding-bottom: 20px;
     min-height: 100vh;
     background-color: ${(props) => props.theme.palette.background.default};

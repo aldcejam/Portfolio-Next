@@ -3,10 +3,10 @@ import { BoxShadowHoverDefault } from "../../BoxShadowDefaultHover/BoxShadowDefa
 import { StyledRedirectButton } from "../RedirectButton/Styled.RedirectButton"
 
 interface ChildrenProps {
-    children: ReactNode;
+    children?: ReactNode;
 }
 interface IComunButton extends ChildrenProps{
-    textButton: string
+    textButton: any
 }
 
 const ComunButton = ({ textButton }:IComunButton) => {

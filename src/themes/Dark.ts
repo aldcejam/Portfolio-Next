@@ -17,6 +17,7 @@ export const DarkTheme = (name: any) => {
         default: "#2d2c2f",
       },
       grey: {
+        "100": '#BBBBBB',
         "600": "#161616",
         "900": "#101010",
       },
