@@ -2,7 +2,7 @@ import { styled } from "@mui/material";
 
 interface IStyledStructureForProject {
     stylebyupdate: string
-    
+
 }
 
 export const StyledStructureForProject = styled('article')<IStyledStructureForProject>(({ stylebyupdate, ...props }) => `
@@ -68,19 +68,27 @@ export const StyledStructureForProject = styled('article')<IStyledStructureForPr
 
 `)
 
-export const ProjectModal = styled('div')`
+interface IStyledProjectModal {
+    showdetails: string
+
+}
+
+export const StyledProjectModal = styled('div')<IStyledProjectModal>(({ showdetails, ...props }) => `
     position: absolute;
     width: 100vw;
     min-height: 100vh;
-    background-color: ${(props) => props.theme.palette.background.default};
+    background-color: ${props.theme.palette.background.default};
     outline: 0px;
     .container{
         position: relative;
         width: 85vw;
-        margin: 20px auto;
-        color: ${(props) => props.theme.palette.primary.contrastText};
+        margin: auto;
+        color: ${props.theme.palette.primary.contrastText};
         .project-details{
-            
+            margin: 20px 0 40px;
+            transition: 0.3s;
+            height:  ${showdetails == 'false' ? '0px': '100%;' };
+            overflow: hidden;
 
             h2{
                 font-size: 2rem;
@@ -91,16 +99,16 @@ export const ProjectModal = styled('div')`
                 font-weight: 400;
                 line-height: 20px;
                 margin: 5px 0 20px;
-                color: ${props => props.theme.palette.grey[100]};
+                color: ${ props.theme.palette.grey[100]};
             }
             hr{
-                border: ${props => props.theme.palette.grey[800]}  1px solid;
+                border: ${ props.theme.palette.grey[800]}  1px solid;
             }
             .grid{
                 display: grid;
                 grid-template-columns: 8fr 4fr;
                 margin-top: 30px;
-                ${props => props.theme.breakpoints.down('md')}{
+                ${props.theme.breakpoints.down('md')}{
                     grid-template-columns: 12fr;
 
                 }
@@ -115,26 +123,35 @@ export const ProjectModal = styled('div')`
                         font-size: 1rem;
                     }
                     .link{
-                        color: ${props => props.theme.palette.primary.main};
+                        color: ${props.theme.palette.primary.main};
                     }
                 }
                 p{
                     margin-bottom: 15px;
-                    color: ${props => props.theme.palette.grey[100]};
+                    color: ${props.theme.palette.grey[100]};
                 }
             }
         }
         
-        .close-button{
-            position: absolute;
-            right: 0;
-            top: 0px;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin-top: -40px;
+
+            .project-details-toggle-button{
+                width: 220px;
+                button{
+                    font-size: 1rem;
+                    color: ${props.theme.palette.primary.main};
+                }
+            }
+            .close-button{
             width: 40px;
             height: 40px;
-            border-radius: 1000px;
             svg{
                 font-size: 1.7rem;
             }
         }
     }
-`
+    }
+`)

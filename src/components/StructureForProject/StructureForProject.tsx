@@ -1,8 +1,10 @@
 import { Modal } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ProjectModal, StyledStructureForProject } from "./Styled.StructureForProject";
+import { StyledProjectModal, StyledStructureForProject } from "./Styled.StructureForProject";
 import CloseIcon from '@mui/icons-material/Close';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 import ComunButton from "../Buttons/ComunButton/ComunButton";
 
 interface IStructureForProject {
@@ -21,18 +23,29 @@ interface IStructureForProject {
 
 const StructureForProject = ({ project }: IStructureForProject) => {
 
+    /* ===== styles ===== */
     const [StyleForUpdate, setStyleForUpdate] = useState('')
-
+    
     useEffect(() => {
         setStyleForUpdate('StyleForUpdate');
     }, [project, []])
-
-
-    const [projectModalIsOpen, setProjectModalIsOpen] = useState(false)
-
+    
+    
+    /* ===== Modal ===== */
+    const [StyledProjectModalIsOpen, setStyledProjectModalIsOpen] = useState(false)
+    
     const ToggleOpenProject = () => {
-        projectModalIsOpen ? setProjectModalIsOpen(false) : setProjectModalIsOpen(true)
+        StyledProjectModalIsOpen ? setStyledProjectModalIsOpen(false) : setStyledProjectModalIsOpen(true)
     }
+    
+    /* ===== showDetails ===== */
+    
+    const [showDetails, setShowDetails] = useState(false)
+    
+    const ToggleShowDetails = () => {
+        showDetails ? setShowDetails(false) : setShowDetails(true)
+    }
+
 
     return (
         <>
@@ -44,12 +57,12 @@ const StructureForProject = ({ project }: IStructureForProject) => {
                 <h3>{project.title}</h3>
             </StyledStructureForProject>
             <Modal
-                open={projectModalIsOpen}
+                open={StyledProjectModalIsOpen}
                 hideBackdrop
                 sx={{ outline: 0 }}
-                
+
             >
-                <ProjectModal>
+                <StyledProjectModal showdetails={showDetails.toString()}>
                     <div className="container">
                         <div className="project-details">
                             <h2>{project.title}</h2>
@@ -63,16 +76,24 @@ const StructureForProject = ({ project }: IStructureForProject) => {
                                 <div className="project-information">
                                     <h2>Informações do projeto</h2>
                                     <h3><span>Data -</span> {project.data}</h3>
-                                    <h3><span>Ferramentas - </span>{project.description}</h3>
+                                    <h3><span>Ferramentas - </span>{project.technologies}</h3>
                                     <h3><span>acessar projeto no GitHub -</span><span className="link"> {project.link}</span></h3>
                                 </div>
                             </div>
                         </div>
-                        <div className="close-button" onClick={() => ToggleOpenProject()}>
-                            <ComunButton textButton={<CloseIcon />} />
+                        <div className="header">
+                            <div className="project-details-toggle-button" onClick={() => ToggleShowDetails()}>
+                                <ComunButton 
+                                textButton={`Detalhes do projeto`}
+                                icon={<AddIcon/>}
+                                />
+                            </div>
+                            <div className="close-button">
+                                <ComunButton icon={<CloseIcon />} />
+                            </div>
                         </div>
                     </div>
-                </ProjectModal>
+                </StyledProjectModal>
             </Modal>
 
         </>
