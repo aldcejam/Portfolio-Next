@@ -25,27 +25,26 @@ const StructureForProject = ({ project }: IStructureForProject) => {
 
     /* ===== styles ===== */
     const [StyleForUpdate, setStyleForUpdate] = useState('')
-    
+
     useEffect(() => {
         setStyleForUpdate('StyleForUpdate');
     }, [project, []])
-    
-    
+
+
     /* ===== Modal ===== */
     const [StyledProjectModalIsOpen, setStyledProjectModalIsOpen] = useState(false)
-    
+
     const ToggleOpenProject = () => {
         StyledProjectModalIsOpen ? setStyledProjectModalIsOpen(false) : setStyledProjectModalIsOpen(true)
     }
-    
+
     /* ===== showDetails ===== */
-    
+
     const [showDetails, setShowDetails] = useState(false)
-    
+
     const ToggleShowDetails = () => {
         showDetails ? setShowDetails(false) : setShowDetails(true)
     }
-
 
     return (
         <>
@@ -62,11 +61,13 @@ const StructureForProject = ({ project }: IStructureForProject) => {
                 sx={{ outline: 0 }}
 
             >
-                <StyledProjectModal showdetails={showDetails.toString()}>
+                <StyledProjectModal>
                     <div className="container">
-                        <div className="project-details">
-                            <h2>{project.title}</h2>
-                            <h3>categoria - {project.projectCategory}</h3>
+                        <div className={`project-details ${showDetails ? 'project-details-open' : ''}`}>
+                            <div className="project-title">
+                                <h2>{project.title}</h2>
+                                <h3>categoria - {project.projectCategory}</h3>
+                            </div>
                             <hr />
                             <div className="grid">
                                 <div className="about-project">
@@ -83,12 +84,12 @@ const StructureForProject = ({ project }: IStructureForProject) => {
                         </div>
                         <div className="header">
                             <div className="project-details-toggle-button" onClick={() => ToggleShowDetails()}>
-                                <ComunButton 
-                                textButton={`Detalhes do projeto`}
-                                icon={<AddIcon/>}
+                                <ComunButton
+                                    textButton={`Detalhes do projeto`}
+                                    icon={<AddIcon />}
                                 />
                             </div>
-                            <div className="close-button">
+                            <div className="close-button" onClick={() => ToggleOpenProject()}>
                                 <ComunButton icon={<CloseIcon />} />
                             </div>
                         </div>
