@@ -1,13 +1,13 @@
 import { styled } from "@mui/material";
 
 interface IStyledStructureForProject {
-    stylebyupdate: string;
+  stylebyupdate: string;
 }
 
 export const StyledStructureForProject = styled(
-    "article"
+  "article"
 )<IStyledStructureForProject>(
-    ({ stylebyupdate, ...props }) => `
+  ({ stylebyupdate, ...props }) => `
     position: relative;
     width: 100%;
     height: 225px;
@@ -79,7 +79,6 @@ export const StyledProjectModal = styled("div")`
   outline: 0px;
   .container {
     position: relative;
-    width: 85vw;
     margin: auto;
     color: ${(props) => props.theme.palette.primary.contrastText};
 
@@ -122,33 +121,32 @@ export const StyledProjectModal = styled("div")`
       hr {
         border: ${(props) => props.theme.palette.grey[800]} 1px solid;
       }
-      div {
-        .grid {
-          display: grid;
-          gap: 50px;
-          grid-template-columns: 8fr 4fr;
-          margin-top: 30px;
-          ${(props) => props.theme.breakpoints.down("md")} {
-            grid-template-columns: 12fr;
+      .grid {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 8fr 4fr;
+        margin-top: 30px;
+        ${(props) => props.theme.breakpoints.down("md")} {
+          grid-template-columns: 12fr;
+        }
+        h2 {
+          margin-bottom: 15px;
+          font-size: 1.3rem;
+        }
+        h3 {
+          margin: 0 0 20px;
+          span {
+            font-weight: 700;
+            font-size: 1rem;
           }
-          h2 {
-            margin-bottom: 15px;
-            font-size: 1.3rem;
+          .link {
+            color: ${(props) => props.theme.palette.primary.main};
           }
-          h3 {
-            margin: 0 0 20px;
-            span {
-              font-weight: 700;
-              font-size: 1rem;
-            }
-            .link {
-              color: ${(props) => props.theme.palette.primary.main};
-            }
-          }
-          .project-title{
+        }
+        .project-title {
           p {
             color: ${(props) => props.theme.palette.grey[100]};
-          }}
+          }
         }
       }
     }
@@ -170,6 +168,32 @@ export const StyledProjectModal = styled("div")`
         height: 40px;
         svg {
           font-size: 1.7rem;
+        }
+      }
+    }
+    .project-images {
+      /* ======== arrow slide of Splide ======== */
+      .splide__arrows, .splide__arrows--ltr{
+        color: #ee0404 !important;
+
+        .splide__arrow--prev {
+          svg {
+            path {
+              background: #ff1010;
+            }
+          }
+        }
+      }
+      .splide {
+        .splide-img {
+          overflow-y: scroll;
+          height: 75vh;
+          div {
+            display: flex;
+            img {
+              width: 100%;
+            }
+          }
         }
       }
     }

@@ -6,6 +6,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import ComunButton from "../Buttons/ComunButton/ComunButton";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Container } from "../../stylesPages/Styled.App";
 
 interface IStructureForProject {
     project: {
@@ -62,38 +64,61 @@ const StructureForProject = ({ project }: IStructureForProject) => {
 
             >
                 <StyledProjectModal>
-                    <div className="container">
-                        <div className={`project-details ${showDetails ? 'project-details-open' : ''}`}>
-                            <div className="project-title">
-                                <h2>{project.title}</h2>
-                                <h3>categoria - {project.projectCategory}</h3>
+                    <Container>
+                        <div className="container">
+                            <div className={`project-details ${showDetails ? 'project-details-open' : ''}`}>
+                                <div className="project-title">
+                                    <h2>{project.title}</h2>
+                                    <h3>categoria - {project.projectCategory}</h3>
+                                </div>
+                                <hr />
+                                <div className="grid">
+                                    <div className="about-project">
+                                        <h2>Sobre o Projeto</h2>
+                                        <p>{project.description}</p>
+                                    </div>
+                                    <div className="project-information">
+                                        <h2>Informações do projeto</h2>
+                                        <h3><span>Data -</span> {project.data}</h3>
+                                        <h3><span>Ferramentas - </span>{project.technologies}</h3>
+                                        <h3><span>acessar projeto no GitHub -</span><span className="link"> {project.link}</span></h3>
+                                    </div>
+                                </div>
                             </div>
-                            <hr />
-                            <div className="grid">
-                                <div className="about-project">
-                                    <h2>Sobre o Projeto</h2>
-                                    <p>{project.description}</p>
+                            <div className="header">
+                                <div className="project-details-toggle-button" onClick={() => ToggleShowDetails()}>
+                                    <ComunButton
+                                        textButton={`Detalhes do projeto`}
+                                        icon={<AddIcon />}
+                                    />
                                 </div>
-                                <div className="project-information">
-                                    <h2>Informações do projeto</h2>
-                                    <h3><span>Data -</span> {project.data}</h3>
-                                    <h3><span>Ferramentas - </span>{project.technologies}</h3>
-                                    <h3><span>acessar projeto no GitHub -</span><span className="link"> {project.link}</span></h3>
+                                <div className="close-button" onClick={() => ToggleOpenProject()}>
+                                    <ComunButton icon={<CloseIcon />} />
                                 </div>
+                            </div>
+                            <div className="project-images">
+                                <Splide
+                                    options={{
+                                        rewind: false,
+                                        arrows: true,
+                                        perPage: 1,
+                                        pagination: false
+
+                                    }}
+                                    className='splide'
+                                >
+                                    <SplideSlide className="splide-img">
+                                        <div>
+                                            <img src="/large/project-7/1.png" alt="" />
+                                        </div>
+                                    </SplideSlide>
+                                    <SplideSlide>
+                                        <img src="/thumb/project-2.png" alt="" />
+                                    </SplideSlide>
+                                </Splide>
                             </div>
                         </div>
-                        <div className="header">
-                            <div className="project-details-toggle-button" onClick={() => ToggleShowDetails()}>
-                                <ComunButton
-                                    textButton={`Detalhes do projeto`}
-                                    icon={<AddIcon />}
-                                />
-                            </div>
-                            <div className="close-button" onClick={() => ToggleOpenProject()}>
-                                <ComunButton icon={<CloseIcon />} />
-                            </div>
-                        </div>
-                    </div>
+                    </Container>
                 </StyledProjectModal>
             </Modal>
 
