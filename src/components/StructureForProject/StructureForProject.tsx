@@ -81,7 +81,7 @@ const StructureForProject = ({ project }: IStructureForProject) => {
                                         <h2>Informações do projeto</h2>
                                         <h3><span>Data -</span> {project.data}</h3>
                                         <h3><span>Ferramentas - </span>{project.technologies}</h3>
-                                        <h3><span>acessar projeto no GitHub -</span><a href={project.link} target="_blank" className="link"> github/project</a></h3>
+                                        <h3><span>acessar projeto no GitHub -</span><a href={project.link} target="" className="link"> github/project</a></h3>
                                     </div>
                                 </div>
                             </div>
