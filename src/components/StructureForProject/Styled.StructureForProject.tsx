@@ -128,13 +128,15 @@ export const StyledProjectModal = styled("div")`
         margin-top: 30px;
         ${(props) => props.theme.breakpoints.down("md")} {
           grid-template-columns: 12fr;
+          gap: 20px;
         }
         h2 {
-          margin-bottom: 15px;
+          margin: 0 0 15px 0;
           font-size: 1.3rem;
         }
         h3 {
           margin: 0 0 20px;
+          font-weight: 400;
           span {
             font-weight: 700;
             font-size: 1rem;
@@ -186,7 +188,7 @@ export const StyledProjectModal = styled("div")`
       }
       .splide {
         .splide-img {
-          overflow-y: scroll;
+          overflow-y: auto;
           height: 75vh;
           div {
             display: flex;

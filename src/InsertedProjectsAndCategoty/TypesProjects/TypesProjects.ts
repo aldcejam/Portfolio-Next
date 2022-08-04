@@ -3,7 +3,7 @@ export interface IProjeto {
     description: string,
     projectCategory: string,
     data: string,
-    client: string,
+    client?: string,
     link: string,
     technologies: string,
     imageThumb: string,

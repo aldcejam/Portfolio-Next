@@ -7,7 +7,7 @@ export const LightTheme = (mainColor:string) => {
     palette: {
       primary: {
         main: mainColor,
-        contrastText: "#101010",
+        contrastText: "#666666",
       },
       action: {
         active: "#000",

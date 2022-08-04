@@ -15,7 +15,7 @@ interface IStructureForProject {
         description: string,
         projectCategory: string,
         data: string,
-        client: string,
+        client?: string,
         link: string,
         technologies: string,
         imageThumb: string,
@@ -73,15 +73,15 @@ const StructureForProject = ({ project }: IStructureForProject) => {
                                 </div>
                                 <hr />
                                 <div className="grid">
-                                    <div className="about-project">
+                                    <div>
                                         <h2>Sobre o Projeto</h2>
                                         <p>{project.description}</p>
                                     </div>
-                                    <div className="project-information">
+                                    <div>
                                         <h2>Informações do projeto</h2>
                                         <h3><span>Data -</span> {project.data}</h3>
                                         <h3><span>Ferramentas - </span>{project.technologies}</h3>
-                                        <h3><span>acessar projeto no GitHub -</span><span className="link"> {project.link}</span></h3>
+                                        <h3><span>acessar projeto no GitHub -</span><a href={project.link} target="_blank" className="link"> github/project</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -99,22 +99,23 @@ const StructureForProject = ({ project }: IStructureForProject) => {
                             <div className="project-images">
                                 <Splide
                                     options={{
-                                        rewind: false,
+                                        rewind: true,
                                         arrows: true,
                                         perPage: 1,
-                                        pagination: false
+                                        pagination: false,
 
                                     }}
                                     className='splide'
                                 >
-                                    <SplideSlide className="splide-img">
-                                        <div>
-                                            <img src="/large/project-7/1.png" alt="" />
-                                        </div>
-                                    </SplideSlide>
-                                    <SplideSlide>
-                                        <img src="/thumb/project-2.png" alt="" />
-                                    </SplideSlide>
+                                    {project.images.map((image) => {
+                                        return (
+                                            <SplideSlide key={image} className="splide-img">
+                                                <div>
+                                                    <img src={image} alt="" />
+                                                </div>
+                                            </SplideSlide>
+                                        )
+                                    })}
                                 </Splide>
                             </div>
                         </div>

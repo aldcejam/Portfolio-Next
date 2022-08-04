@@ -5,7 +5,7 @@ export const DarkTheme = (name: any) => {
   return createTheme({
     palette: {
       primary: {
-        contrastText: "#ffffff",
+        contrastText: "#BBBBBB",
         main: name,
       },
       action: {
