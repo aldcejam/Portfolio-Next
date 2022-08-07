@@ -9,7 +9,7 @@ export const DarkTheme = (name: any) => {
         main: name,
       },
       action: {
-        active: "#fff",
+        active: "#ffffff",
         disabled: "#000",
       },
       background: {

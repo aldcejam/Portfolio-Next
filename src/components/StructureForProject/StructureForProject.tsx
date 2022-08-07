@@ -1,7 +1,7 @@
 import { Modal } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { StyledProjectModal, StyledStructureForProject } from "./Styled.StructureForProject";
+import { StyledProjectModal, StyledStructureForProject } from "./StylesStructureForProject/Styled.StructureForProject";
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
