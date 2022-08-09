@@ -10,7 +10,7 @@ export const DarkTheme = (name: any) => {
       },
       action: {
         active: "#ffffff",
-        disabled: "#000",
+        disabled: "#000000",
       },
       background: {
         paper: "#353535",
