@@ -5,6 +5,7 @@ interface IStyledPageProjetos{
 }
 
 export const StyledPageProjetos = styled('div')<IStyledPageProjetos>(({ stylebyupdate, ...props }) =>`
+    padding-bottom: 50px;
     .title-page{
         text-align: center;
         h1{

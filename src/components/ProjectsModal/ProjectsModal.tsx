@@ -1,15 +1,17 @@
 import { Modal } from "@mui/material";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { StyledProjectModal, StyledStructureForProject } from "./StylesStructureForProject/Styled.StructureForProject";
+import { useState } from "react";
+import { StyledProjectModal } from "./Styled.ProjectModal";
+
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+
 import ComunButton from "../Buttons/ComunButton/ComunButton";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Container } from "../../stylesPages/Styled.App";
 
-interface IStructureForProject {
+interface TypesProjectsModal{
     project: {
         title: string,
         description: string,
@@ -21,47 +23,24 @@ interface IStructureForProject {
         imageThumb: string,
         images: Array<string>
     }
+    projectModalIsOpen: boolean
+    ToggleOpenProject: ()=> void
 }
 
-const StructureForProject = ({ project }: IStructureForProject) => {
+const ProjectsModal = ({project, projectModalIsOpen, ToggleOpenProject}:TypesProjectsModal)=>{
+        /* ===== showDetails ===== */
+    
+        const [showDetails, setShowDetails] = useState(false)
+    
+        const ToggleShowDetails = () => {
+            showDetails ? setShowDetails(false) : setShowDetails(true)
+        }
 
-    /* ===== styles ===== */
-    const [StyleForUpdate, setStyleForUpdate] = useState('')
-
-    useEffect(() => {
-        setStyleForUpdate('StyleForUpdate');
-    }, [project, []])
-
-
-    /* ===== Modal ===== */
-    const [StyledProjectModalIsOpen, setStyledProjectModalIsOpen] = useState(false)
-
-    const ToggleOpenProject = () => {
-        StyledProjectModalIsOpen ? setStyledProjectModalIsOpen(false) : setStyledProjectModalIsOpen(true)
-    }
-
-    /* ===== showDetails ===== */
-
-    const [showDetails, setShowDetails] = useState(false)
-
-    const ToggleShowDetails = () => {
-        showDetails ? setShowDetails(false) : setShowDetails(true)
-    }
-
-    return (
-        <>
-            <StyledStructureForProject onClick={() => ToggleOpenProject()} stylebyupdate={StyleForUpdate}>
-                <div className="project-thumb">
-                    <Image src={project.imageThumb} layout='fill' objectFit="cover" />
-                </div>
-                <p>ver projeto</p>
-                <h3>{project.title}</h3>
-            </StyledStructureForProject>
-            <Modal
-                open={StyledProjectModalIsOpen}
+    return(
+        <Modal
+                open={projectModalIsOpen}
                 hideBackdrop
                 sx={{ outline: 0 }}
-
             >
                 <StyledProjectModal>
                     <Container>
@@ -89,7 +68,9 @@ const StructureForProject = ({ project }: IStructureForProject) => {
                                 <div className="project-details-toggle-button" onClick={() => ToggleShowDetails()}>
                                     <ComunButton
                                         textButton={`Detalhes do projeto`}
-                                        icon={<AddIcon />}
+                                        icon={
+                                        showDetails ? <RemoveIcon/> : <AddIcon />
+                                    }
                                     />
                                 </div>
                                 <div className="close-button" onClick={() => ToggleOpenProject()}>
@@ -122,10 +103,7 @@ const StructureForProject = ({ project }: IStructureForProject) => {
                     </Container>
                 </StyledProjectModal>
             </Modal>
-
-        </>
     )
-
 }
 
-export default StructureForProject;
+export default ProjectsModal
