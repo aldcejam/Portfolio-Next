@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { StyledThumbProject } from "./Styled.ThumbProject";
-import ProjectsModal from "../ProjectsModal/ProjectsModal";
+import ProjectsModal from "../../partils/ProjectsModal/ProjectsModal";
 
 interface IStructureForProject {
     project: {

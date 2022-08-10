@@ -1,5 +1,5 @@
 import { useState } from "react"
-import PagesRedirectMenu from "../PagesRedirectModal/PagesRedirectModal"
+import PagesRedirectMenu from "../../partils/PagesRedirectModal/PagesRedirectModal"
 import { StyledMenuBurguer } from "./Styled.MenuBurguer"
 
 const MenuBurguer = () => {

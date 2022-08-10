@@ -6,7 +6,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
 import { Container } from "../../stylesPages/Styled.App";
-import ComunButton from "../Buttons/ComunButton/ComunButton";
+import ComunButton from "../../components/Buttons/ComunButton/ComunButton";
 
 import { StyledProjectModal } from "./Styled.ProjectModal";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
