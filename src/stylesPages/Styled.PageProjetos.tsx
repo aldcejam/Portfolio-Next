@@ -30,6 +30,7 @@ export const StyledPageProjetos = styled('div')<IStyledPageProjetos>(({ stylebyu
         .categorys{
             display: flex;
             transition: .5s;
+            flex-wrap: wrap;
             gap: 50vw;
             ${stylebyupdate == 'StyleForUpdate' ? 'gap: 10px;' : ''}
             justify-content: center;
