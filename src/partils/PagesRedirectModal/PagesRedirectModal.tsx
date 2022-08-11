@@ -25,7 +25,7 @@ const PagesRedirectMenu = ({ menuBurguerIsActive,ToggleMenuBurguer }: IPagesRedi
                         <RedirectButton link="/projetos" textButton="Projetos" />
                     </div>
                     <div onClick={ToggleMenuBurguer}>
-                        <RedirectButton link="/" textButton="Sobre" />
+                        <RedirectButton link="/sobre" textButton="Sobre" />
                     </div>
                     <div onClick={ToggleMenuBurguer}>
                         <RedirectButton link="/" textButton="Contato" />

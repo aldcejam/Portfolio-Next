@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import MainProfileRounded from '../components/MainProfile/MainProfile'
+import MainProfile from '../components/MainProfile/MainProfile'
 import { RedirectButton } from '../components/Buttons/RedirectButton/RedirectButton'
 import BackgroundGeometric from '../partils/BackgroundGeometric/BackgroundGeometric'
-import { PositionMainProfileRounded, StyledPageIndex } from '../stylesPages/Styled.PageIndex'
+import { PositionMainProfile, StyledPageIndex } from '../stylesPages/Styled.PageIndex'
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +13,9 @@ const Home: NextPage = () => {
       </Head>
       <BackgroundGeometric />
       <StyledPageIndex>
-        <PositionMainProfileRounded>
-          <MainProfileRounded />
-        </PositionMainProfileRounded>
+        <PositionMainProfile>
+          <MainProfile rounded={true}/>
+        </PositionMainProfile>
         <div className='presentation'>
           <span>Olá</span>
           <h1>Me chamo Aldcejam</h1>
@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
         <div className='redirect-buttons'>
           <div className='button-redirect-sobremim'>
-            <RedirectButton link='/' textButton='Mais sobre mim' />
+            <RedirectButton link='/sobre' textButton='Mais sobre mim' />
           </div>
           <div className='button-redirect-projetos'>
             <RedirectButton link='/projetos' textButton='Projetos' />

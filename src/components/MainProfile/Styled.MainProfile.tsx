@@ -1,20 +1,24 @@
 import { styled } from "@mui/material";
 
-export const StyledMainProfileRounded = styled('div')`
-    width: clamp(270px, 30vw, 380px);
-    height: clamp(270px, 30vw, 380px);
-    border-radius: 1000px;
+interface IStyledMainProfile{
+    rounded: string
+}
+
+export const StyledMainProfile = styled('div')<IStyledMainProfile>(({ rounded, ...props }) => `
+    width: 100%;
+    height: 100%;
+    border-radius: ${rounded == 'true' ?  '1000px': '0'};
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: ${(props)=> props.theme.shadows[1]};
+    box-shadow: ${props.theme.shadows[1]};
     cursor: auto;
     div{
-        box-shadow: ${(props)=> props.theme.shadows[3]};
+        box-shadow: ${props.theme.shadows[3]};
         overflow: hidden;
-        border-radius: 1000px;
-        width: clamp(240px, 28vw, 350px);
-        height: clamp(240px, 28vw, 350px);
+        border-radius: ${rounded == 'true' ?  '1000px': '0'};
+        width: 90%;
+        height: 90%;
         position: relative;
     }
-`
+`)

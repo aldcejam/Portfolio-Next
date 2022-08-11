@@ -1,14 +1,19 @@
 import Image from "next/image";
-import { StyledMainProfileRounded } from "./Styled.MainProfile";
+import { StyledMainProfile } from "./Styled.MainProfile";
 
-const MainProfileRounded = ()=>{
+interface typesMainProfile{
+    rounded: boolean
+
+}
+
+const MainProfile= ({rounded = false}:typesMainProfile)=>{
     return(
-        <StyledMainProfileRounded>
+        <StyledMainProfile rounded={rounded.toString()}>
             <div>
                 <Image src={'/profile-pic.png'} layout='fill' />
             </div>
-        </StyledMainProfileRounded>
+        </StyledMainProfile>
     )
 }
 
-export default MainProfileRounded;
+export default MainProfile;

@@ -1,12 +1,16 @@
 import { createTheme } from "@mui/material";
 
 
-export const DarkTheme = (name: any) => {
+export const DarkTheme = (mainColor:string) => {
   return createTheme({
     palette: {
       primary: {
         contrastText: "#BBBBBB",
-        main: name,
+        main: mainColor,
+      },
+      secondary: {
+        contrastText: "#ffffff",
+        main: mainColor,
       },
       action: {
         active: "#ffffff",

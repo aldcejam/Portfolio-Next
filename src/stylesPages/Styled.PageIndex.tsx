@@ -56,8 +56,9 @@ export const StyledPageIndex = styled('div')`
     }
 `
 
-export const PositionMainProfileRounded = styled('div')`
+export const PositionMainProfile = styled('div')`
     width: clamp(240px, 30vw, 340px);
+    height: clamp(240px, 30vw, 340px);
     margin: 6% 7% auto auto;
     cursor: pointer;
 

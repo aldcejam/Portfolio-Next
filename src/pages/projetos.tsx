@@ -3,8 +3,8 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import StructureForProject from '../components/ThumbProject/ThumbProject'
 import { StyledPageProjetos } from '../stylesPages/Styled.PageProjetos'
-import {onlyCategories} from '../InsertedProjectsAndCategoty/Category/AllProjectCategories'
-import { InsertedProjects } from '../InsertedProjectsAndCategoty/Projects/InsertedProjects'
+import {onlyCategories} from '../ProfileData/InsertedProjectsAndCategoty/Category/AllProjectCategories'
+import { InsertedProjects } from '../ProfileData/InsertedProjectsAndCategoty/Projects/InsertedProjects'
 
 const Projetos: NextPage = () => {
 

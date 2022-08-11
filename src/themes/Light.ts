@@ -9,6 +9,10 @@ export const LightTheme = (mainColor:string) => {
         main: mainColor,
         contrastText: "#666666",
       },
+      secondary: {
+        contrastText: "#000000",
+        main: mainColor,
+      },
       action: {
         active: "#000",
         disabled: "#fff",
