@@ -58,6 +58,11 @@ const Sobre: NextPage = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="skills">
+                <div>Skills</div>
+                <div>Estudos</div>
+            </div>
             
             <Formation/>
 

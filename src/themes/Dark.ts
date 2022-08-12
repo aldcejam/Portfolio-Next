@@ -36,7 +36,7 @@ export const DarkTheme = (mainColor:string) => {
       values: {
         xs: 0,
         sm: 600,
-        md: 768,
+        md: 800,
         lg: 1100,
         xl: 1536,
       },
