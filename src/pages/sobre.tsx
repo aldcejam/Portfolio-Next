@@ -26,17 +26,17 @@ const Sobre: NextPage = () => {
                     </div>
                     <div className="profile__social-midias">
                         <div>
-                            <a target={'_blank'} href={SocialMidias.linkGitHub}>
+                            <a target={'_blank'} rel="noopener noreferrer" href={SocialMidias.linkGitHub}>
                                 <ComunButton icon={<GitHubIcon />} />
                             </a>
                         </div>
                         <div>
-                            <a target={'_blank'} href={SocialMidias.linkInstagram}>
+                            <a target={'_blank'} rel="noopener noreferrer" href={SocialMidias.linkInstagram}>
                                 <ComunButton icon={<InstagramIcon />} />
                             </a>
                         </div>
                         <div>
-                            <a target={'_blank'} href={SocialMidias.linkLinkedin}>
+                            <a target={'_blank'} rel="noopener noreferrer" href={SocialMidias.linkLinkedin}>
                                 <ComunButton icon={<LinkedInIcon />} />
                             </a>
                         </div>
