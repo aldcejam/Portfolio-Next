@@ -53,6 +53,7 @@ export const StyledPageSobre = styled('div')`
             .informations__cv-and-contact{
                 display: flex;
                 gap: 20px;
+                margin-top: 40px;
                 
                 button{
                     color: ${props => props.theme.palette.secondary.main};
