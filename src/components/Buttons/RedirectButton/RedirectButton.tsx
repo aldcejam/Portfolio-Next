@@ -2,18 +2,13 @@
 import Link from "next/link"
 import { BoxShadowHoverDefault } from "../../BoxShadowDefaultHover/BoxShadowDefaultHover"
 import { StyledRedirectButton } from "./Styled.RedirectButton"
-/* 
-interface IRedirectButton {
+
+type typesRedirectButton = {
     textButton: string
     link: string
-
-} */
-type IRedirectButton = {
-    textButton: string
-    link: '/' | string
 }
 
-export const RedirectButton = ({ textButton, link }: IRedirectButton) => {
+export const RedirectButton = ({ textButton, link }: typesRedirectButton) => {
     return (
         <Link href={link}>
             <a>

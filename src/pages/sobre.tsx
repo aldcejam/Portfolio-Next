@@ -10,6 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ComunButton from "../components/Buttons/ComunButton/ComunButton";
+import { RedirectButton } from "../components/Buttons/RedirectButton/RedirectButton";
 
 
 
@@ -24,13 +25,19 @@ const Sobre: NextPage = () => {
                     </div>
                     <div className="profile__social-midias">
                         <div>
-                            <a target={'_blank'} href={SocialMidias.linkGitHub}><GitHubIcon /></a>
+                            <a target={'_blank'} href={SocialMidias.linkGitHub}>
+                                <ComunButton icon={<GitHubIcon />} />
+                            </a>
                         </div>
                         <div>
-                            <a target={'_blank'} href={SocialMidias.linkInstagram}><InstagramIcon /></a>
+                            <a target={'_blank'} href={SocialMidias.linkInstagram}>
+                                <ComunButton icon={<InstagramIcon />} />
+                            </a>
                         </div>
                         <div>
-                            <a target={'_blank'} href={SocialMidias.linkLinkedin}><LinkedInIcon /></a>
+                            <a target={'_blank'} href={SocialMidias.linkLinkedin}>
+                                <ComunButton icon={<LinkedInIcon />} />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -40,12 +47,12 @@ const Sobre: NextPage = () => {
                     </div>
                     <div className="informations__cv-and-contact">
                         <div className="cv-and-contact--cv">
-                            <a href="">
-                                <ComunButton textButton={'Currículo '}/>
+                            <a href="/curriculo-aldcejam.pdf">
+                                <ComunButton textButton={'Currículo '} />
                             </a>
                         </div>
-                        <div className="contact">
-
+                        <div className="cv-and-contact--contact">
+                            <RedirectButton link="/" textButton="contate-me" />
                         </div>
                     </div>
                 </div>

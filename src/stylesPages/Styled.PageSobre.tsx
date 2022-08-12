@@ -3,11 +3,14 @@ import { styled } from "@mui/material";
 export const StyledPageSobre = styled('div')`
     .profile{
         display: flex;
+        align-items: flex-start;
         gap: 30px;
-        &__identifiers{
-            display: flex;
+        justify-content: center;
+        ${props => props.theme.breakpoints.down('md')}{
             flex-wrap: wrap;
-            justify-content: center;
+        }
+        &__identifiers{
+            flex-basis: 100;
             
             .identifiers--profile-pic{
                 width: clamp(240px, 30vw, 340px);
@@ -15,9 +18,27 @@ export const StyledPageSobre = styled('div')`
             }
             .profile__social-midias{
                 display: flex;
+                justify-content: center;
+                margin: auto;
+                display: flex;
                 gap: 10px;
                 margin-top: 15px;
-                color: ${props => props.theme.palette.secondary.contrastText};
+                height: 35px;
+                div{
+                    a{
+                      
+                        transition: all 0.2s linear !important;
+                        &:hover button{
+                            color: ${props => props.theme.palette.primary.main} !important;
+                        }
+                        button{
+                            transition: all 0.2s linear !important;
+                            padding-top: 2px;
+                            color: ${props => props.theme.palette.secondary.contrastText};
+                            
+                        }
+                    }
+                }
                 
             }
             
@@ -27,19 +48,18 @@ export const StyledPageSobre = styled('div')`
             .informations--text-about-professional{
                 color: ${props => props.theme.palette.primary.contrastText};
                 line-height: 22px;
+                letter-spacing: 0.5px;
             }
             .informations__cv-and-contact{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr) ;
+                display: flex;
+                gap: 20px;
                 
-                .cv-and-contact--cv{
+                button{
+                    color: ${props => props.theme.palette.secondary.main};
+                    font-weight: 500;
+                    font-size: 1rem;
                     height: 40px;
-                    width: 120px;
-                    div{
-                        color: ${props => props.theme.palette.secondary.main};
-                        font-weight: bold;
-                        font-size: 1rem;
-                    }
+                    padding: 0 20px;
                 }
             }
 

@@ -15,16 +15,14 @@ interface IComunButton extends ChildrenProps {
 const ComunButton = ({ textButton, icon }: IComunButton) => {
     return (
         <BoxShadowHoverDefault>
-            <StyledRedirectButton>
-                <StyledComunButton className="content-comun-button">
-                    {
-                        textButton ? <span>{textButton}</span> : null
-                    } 
-                    {
-                        icon ? <span className="icon">{icon}</span> : null
-                    } 
-                </StyledComunButton>
-            </StyledRedirectButton>
+            <StyledComunButton className="content-comun-button">
+                {
+                    textButton ? <span>{textButton}</span> : null
+                }
+                {
+                    icon ? <span className="icon">{icon}</span> : null
+                }
+            </StyledComunButton>
         </BoxShadowHoverDefault>
     )
 }

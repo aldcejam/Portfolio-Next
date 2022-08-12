@@ -10,5 +10,6 @@ export const StyledRedirectButton = styled('button')`
     border-radius: 999px;
     border: 0px solid;
     background-color: transparent;
+    padding: 0 20px;
     
 `

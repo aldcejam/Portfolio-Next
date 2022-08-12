@@ -17,6 +17,7 @@ export const ModalMenuBurguer = styled('div')`
             button{
                 font-size: 1.5rem;
                 padding: 15px 40px;
+                color: ${props => props.theme.palette.primary.contrastText};
             }
         }
         
