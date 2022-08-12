@@ -12,10 +12,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ComunButton from "../components/Buttons/ComunButton/ComunButton";
 import { RedirectButton } from "../components/Buttons/RedirectButton/RedirectButton";
 import Formation from "../components/Formation/Formation";
-
+import { useState } from "react";
+import { Skills } from "../ProfileData/Skills/Skills";
 
 
 const Sobre: NextPage = () => {
+
+    const [skillsSelected, setSkillsSelected] = useState<'skills' | 'estudos'>('skills')
+
     return (
         <StyledPageSobre>
             <PageTitle title="main info" subtitle="sobre mim" />
@@ -59,12 +63,30 @@ const Sobre: NextPage = () => {
                 </div>
             </div>
 
-            <div className="skills">
-                <div>Skills</div>
-                <div>Estudos</div>
+            <div className="skills-estudos">
+                <div 
+                onClick={()=> setSkillsSelected("skills")}
+                className={`${skillsSelected == 'skills' ? 'selected' :''}`}
+                >Skills</div>
+                <div 
+                onClick={()=> setSkillsSelected("estudos")}
+                className={`${skillsSelected == 'estudos' ? 'selected' :''}`}
+                >Estudos</div>
             </div>
             
-            <Formation/>
+            {skillsSelected == "estudos" ?
+            <Formation/> : 
+            <div className="skills">
+                {Skills.map(skill=>{
+                    return(
+                        <div className="skill">
+                            {skill}
+                        </div>
+                    )
+                })}
+            </div>
+            
+            }
 
 
         </StyledPageSobre>

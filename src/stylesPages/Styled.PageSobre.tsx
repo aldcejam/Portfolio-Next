@@ -1,6 +1,7 @@
 import { styled } from "@mui/material";
 
 export const StyledPageSobre = styled('div')`
+    user-select: none;
     .profile{
         display: flex;
         align-items: flex-start;
@@ -68,4 +69,36 @@ export const StyledPageSobre = styled('div')`
 
     }
 
+    .skills-estudos{
+        display: flex;
+        justify-content: center;
+        margin: 100px 0 50px;
+        gap: 20px;
+        div{
+            padding: 13px 18px;
+            border-radius: 100px;
+            transition: 0.3s;
+            cursor: pointer;
+            color: ${({theme}) => theme.palette.primary.contrastText};
+            &.selected{
+                color:  ${({theme}) => theme.palette.primary.main};
+                box-shadow:  ${({theme}) => theme.shadows[3]};
+            }
+        }
+    }
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        .skill{
+            padding: 15px 20px;
+            border-radius: 100px;
+            box-shadow: ${({theme})=> theme.shadows[1]};
+            color: ${({theme})=> theme.palette.secondary.contrastText};
+            user-select: none;
+        }
+    }
 `
