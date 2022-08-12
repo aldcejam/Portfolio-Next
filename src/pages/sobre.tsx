@@ -4,7 +4,7 @@ import PageTitle from "../components/PageTitle/PageTitle";
 import { StyledPageSobre } from "../stylesPages/Styled.PageSobre";
 
 import { SocialMidias } from "../ProfileData/SocialMidias/SocialMidias";
-import TextoSobreMim from "../ProfileData/TextoSobreMim/TextoSobreMim";
+import TextoSobreMim from "../ProfileData/textoSobreMim/TextoSobreMim";
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
