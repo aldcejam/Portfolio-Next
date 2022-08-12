@@ -8,7 +8,7 @@ export const StyledButtonsForColorize = styled("div")<IStyledButtonsForColorize>
   position: fixed;
   z-index: 500;
   display: flex;
-  color: ${props.theme.palette.primary.contrastText};
+  color: ${props.theme.palette.secondary.contrastText};
   right: ${displaysettingisactive == 'true' ? '10px' : '-165px'};
   top: 100px;
   transition: all 0.3s linear;

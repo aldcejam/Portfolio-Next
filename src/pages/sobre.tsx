@@ -4,13 +4,14 @@ import PageTitle from "../components/PageTitle/PageTitle";
 import { StyledPageSobre } from "../stylesPages/Styled.PageSobre";
 
 import { SocialMidias } from "../ProfileData/SocialMidias/SocialMidias";
-import TextoSobreMim from "../ProfileData/textoSobreMim/TextoSobreMim";
+import TextoSobreMim from "../ProfileData/TextoSobreMim/TextoSobreMim";
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ComunButton from "../components/Buttons/ComunButton/ComunButton";
 import { RedirectButton } from "../components/Buttons/RedirectButton/RedirectButton";
+import Formation from "../components/Formation/Formation";
 
 
 
@@ -57,6 +58,8 @@ const Sobre: NextPage = () => {
                     </div>
                 </div>
             </div>
+            
+            <Formation/>
 
 
         </StyledPageSobre>
