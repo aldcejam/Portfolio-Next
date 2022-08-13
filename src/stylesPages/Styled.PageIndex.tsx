@@ -43,13 +43,8 @@ export const StyledPageIndex = styled('div')`
             font-size: 0.9rem;
 
         }
-        .button-redirect-sobremim{
-            width: 140px;
-            height: 50px;
-            margin-top: 20px;
-        }
-        .button-redirect-projetos{
-            width: 100px;
+        .button-redirect-sobremim,.button-redirect-projetos{
+            
             height: 50px;
             margin-top: 20px;
         }

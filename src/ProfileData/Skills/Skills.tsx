@@ -7,6 +7,7 @@ export const Skills = [
     'typeScript',
     'Tailwind',
     'Sass',
+    'Material UI',
     'Json'
 
 ]

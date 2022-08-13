@@ -57,35 +57,37 @@ const Sobre: NextPage = () => {
                             </a>
                         </div>
                         <div className="cv-and-contact--contact">
-                            <RedirectButton link="/" textButton="contate-me" />
+                            <RedirectButton link="/contato" textButton="contate-me" />
                         </div>
                     </div>
                 </div>
             </div>
 
             <div className="skills-estudos">
-                <div 
-                onClick={()=> setSkillsSelected("skills")}
-                className={`${skillsSelected == 'skills' ? 'selected' :''}`}
+                <div
+                    onClick={() => setSkillsSelected("skills")}
+                    className={`${skillsSelected == 'skills' ? 'selected' : ''}`}
                 >Skills</div>
-                <div 
-                onClick={()=> setSkillsSelected("estudos")}
-                className={`${skillsSelected == 'estudos' ? 'selected' :''}`}
+                <div
+                    onClick={() => setSkillsSelected("estudos")}
+                    className={`${skillsSelected == 'estudos' ? 'selected' : ''}`}
                 >Estudos</div>
             </div>
-            
+
             {skillsSelected == "estudos" ?
-            <Formation/> : 
-            <div className="skills">
-                {Skills.map(skill=>{
-                    return(
-                        <div className="skill">
-                            {skill}
-                        </div>
-                    )
-                })}
-            </div>
-            
+                <Formation /> :
+                <div className="skills">
+                    <div className="container">
+                        {Skills.map(skill => {
+                            return (
+                                <div className="skill">
+                                    {skill}
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+
             }
 
 

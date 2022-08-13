@@ -18,6 +18,6 @@ export const StyledPageTitle = styled('div')`
             margin-top: 10px;
             font-size: 1.8rem;
             text-transform: uppercase;
-            color: ${(props) => props.theme.palette.primary.contrastText};
+            color: ${(props) => props.theme.palette.secondary.contrastText};
         }
 `

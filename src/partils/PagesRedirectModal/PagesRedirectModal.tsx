@@ -13,6 +13,7 @@ const PagesRedirectMenu = ({ menuBurguerIsActive,ToggleMenuBurguer }: IPagesRedi
         <Modal
             sx={{ zIndex: 900}}
             open={menuBurguerIsActive}
+            
             className='modal-bg'
             
         >
@@ -28,7 +29,7 @@ const PagesRedirectMenu = ({ menuBurguerIsActive,ToggleMenuBurguer }: IPagesRedi
                         <RedirectButton link="/sobre" textButton="Sobre" />
                     </div>
                     <div onClick={ToggleMenuBurguer}>
-                        <RedirectButton link="/" textButton="Contato" />
+                        <RedirectButton link="/contato" textButton="Contato" />
                     </div>
                 </div>
             </ModalMenuBurguer>
