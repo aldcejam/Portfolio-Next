@@ -3,6 +3,62 @@ import { IProjetos } from "../TypesProjects/TypesProjects"
 
 export const InsertedProjects: IProjetos = [
   {
+    title: 'LPS Pousada',
+    description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
+    projectCategory: 'Landing Page',
+    client: 'WebSocorro',
+    data: '2022',
+    link: 'https://mkt.pousadachamame.com.br/pacotes-e-promocoes-bonito-ms',
+    technologies: 'Html,css,js',
+    imageThumb: '/thumb/project-7.png',
+    images: [
+      '/large/project-7/1.png',
+      '/large/project-7/2.png',
+      '/large/project-7/3.png'
+    ]
+  },  
+  {
+    title: 'LPS Construção',
+    description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
+    projectCategory: 'Landing Page',
+    client: 'WebSocorro',
+    data: '2022',
+    link: 'https://project-web-construction.vercel.app/',
+    technologies: 'ReactJs, NextJs, tailwind, sass',
+    imageThumb: '/thumb/project-8.png',
+    images: [
+      '/large/project-8/1.png',
+      '/large/project-8/2.png',
+    ]
+  },  
+  {
+    title: 'LPS pousada hotel',
+    description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
+    projectCategory: 'Landing Page',
+    client: 'WebSocorro',
+    data: '2022',
+    link: 'https://test-job-mu.vercel.app/',
+    technologies: 'ReactJs, NextJs, Typescript,Framer Motion, Tailwind',
+    imageThumb: '/thumb/project-9.png',
+    images: [
+      '/large/project-9/1.png',
+      '/large/project-9/2.png',
+    ]
+  },
+  {
+    title: 'App De Banco',
+    description: 'Este projeto (em desenvolvimento) é baseado em um app comum de banco, no qual terá funções de transferência de dinheiro, rede de amigos para fazer as transferências, histórico de ações, cartões de crédito, entre outras, que já foram adicionadas ou que serão adicionadas aos poucos. todos os dados virão através de um login com next-auth(GITHUB), no caso do saldo da conta, será pego o total de projetos, multiplicado por certo algum numero fixo e transformado em dinheiro a ser usado na conta.',
+    projectCategory: 'NextJs',
+    data: '2022',
+    link: 'https://github.com/aldcejam/App-Bank',
+    technologies: 'React, NextJs, Tailwind, TypeScript',
+    imageThumb: '/thumb/project-3.png',
+    images: [
+      '/large/project-3/1.png',
+      '/large/project-3/2.png',
+    ]
+  },    
+  {
     title: 'DTMoney',
     description: 'Este projeto tem a função de fazer transações com a escolha de adicionar e remover através de algum produto comprado ou vendido, usando essas escolhas o saldo total da conta será alterado.',
     projectCategory: 'ReactJs',
@@ -28,19 +84,6 @@ export const InsertedProjects: IProjetos = [
     images: [
       '/large/project-2/1.png',
       '/large/project-2/2.png',
-    ]
-  },  
-  {
-    title: 'App De Banco',
-    description: 'Este projeto (em desenvolvimento) é baseado em um app comum de banco, no qual terá funções de transferência de dinheiro, rede de amigos para fazer as transferências, histórico de ações, cartões de crédito, entre outras, que já foram adicionadas ou que serão adicionadas aos poucos. todos os dados virão através de um login com next-auth(GITHUB), no caso do saldo da conta, será pego o total de projetos, multiplicado por certo algum numero fixo e transformado em dinheiro a ser usado na conta.',
-    projectCategory: 'NextJs',
-    data: '2022',
-    link: 'https://github.com/aldcejam/App-Bank',
-    technologies: 'React, NextJs, Tailwind, TypeScript',
-    imageThumb: '/thumb/project-3.png',
-    images: [
-      '/large/project-3/1.png',
-      '/large/project-3/2.png',
     ]
   },  
   {
@@ -83,49 +126,7 @@ export const InsertedProjects: IProjetos = [
       '/large/project-6/2.png'
     ]
   },  
-  {
-    title: 'LPS Pousada',
-    description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
-    projectCategory: 'Landing Page',
-    client: 'WebSocorro',
-    data: '2022',
-    link: 'https://mkt.pousadachamame.com.br/pacotes-e-promocoes-bonito-ms',
-    technologies: 'Html,css,js',
-    imageThumb: '/thumb/project-7.png',
-    images: [
-      '/large/project-7/1.png',
-      '/large/project-7/2.png',
-      '/large/project-7/3.png'
-    ]
-  },  
-  {
-    title: 'LPS Construção',
-    description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
-    projectCategory: 'Landing Page',
-    client: 'WebSocorro',
-    data: '2022',
-    link: 'https://project-web-construction.vercel.app/',
-    technologies: 'ReactJs, NextJs, tailwind, sass',
-    imageThumb: '/thumb/project-8.png',
-    images: [
-      '/large/project-8/1.png',
-      '/large/project-8/2.png',
-    ]
-  },  
-  {
-    title: 'LPS pousada hotel',
-    description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
-    projectCategory: 'Landing Page',
-    client: 'WebSocorro',
-    data: '2022',
-    link: 'https://test-job-mu.vercel.app/',
-    technologies: 'ReactJs, NextJs, Typescript,Framer Motion, Tailwind',
-    imageThumb: '/thumb/project-9.png',
-    images: [
-      '/large/project-9/1.png',
-      '/large/project-9/2.png',
-    ]
-  },  
+  
   
     
   ]
