@@ -8,6 +8,7 @@ export const Skills = [
     'Tailwind',
     'Sass',
     'Material UI',
-    'Json'
+    'Json',
+    'Motion Framer'
 
 ]

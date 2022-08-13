@@ -80,6 +80,7 @@ export const StyledProjectModal = styled("div")`
       width: 40px;
       height: 40px;
       svg {
+        color: ${(props) => props.theme.palette.primary.main};
         font-size: 1.7rem;
       }
     }

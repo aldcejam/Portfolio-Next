@@ -112,6 +112,20 @@ export const InsertedProjects: IProjetos = [
       '/large/project-8/2.png',
     ]
   },  
+  {
+    title: 'LPS pousada hotel',
+    description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
+    projectCategory: 'Landing Page',
+    client: 'WebSocorro',
+    data: '2022',
+    link: 'https://test-job-mu.vercel.app/',
+    technologies: 'ReactJs, NextJs, Typescript,Framer Motion, Tailwind',
+    imageThumb: '/thumb/project-9.png',
+    images: [
+      '/large/project-9/1.png',
+      '/large/project-9/2.png',
+    ]
+  },  
   
     
   ]
