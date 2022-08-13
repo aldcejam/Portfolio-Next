@@ -80,7 +80,7 @@ const Sobre: NextPage = () => {
                     <div className="container">
                         {Skills.map(skill => {
                             return (
-                                <div className="skill">
+                                <div key={skill} className="skill">
                                     {skill}
                                 </div>
                             )
