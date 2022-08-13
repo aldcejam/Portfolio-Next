@@ -10,7 +10,7 @@ interface typesCardContact {
 
 const CardContact = ({ title, contact, icon, link }: typesCardContact) => {
     return (
-            <a target={"_blank"} rel="noopener" href={link}>
+            <a target={"_blank"} rel="noopener noreferrer" href={link}>
                 <StyledCardContact>
                     <span>{icon}</span>
                     <h3>{title}</h3>
