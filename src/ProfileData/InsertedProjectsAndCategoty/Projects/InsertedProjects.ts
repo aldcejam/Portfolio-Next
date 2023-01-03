@@ -18,17 +18,16 @@ export const InsertedProjects: IProjetos = [
     ]
   },  
   {
-    title: 'LPS Construção',
+    title: 'LPS Jardim Pompeia',
     description: 'Este projeto foi desenvolvido na empresa WebSocorro, no qual trabalhei com a semântica html, otimização de imagens, organização de código e responsividade',
     projectCategory: 'Landing Page',
     client: 'WebSocorro',
     data: '2022',
-    link: 'https://project-web-construction.vercel.app/',
+    link: 'https://www.jardimpompeia.com.br',
     technologies: 'ReactJs, NextJs, tailwind, sass',
     imageThumb: '/thumb/project-8.png',
     images: [
-      '/large/project-8/1.png',
-      '/large/project-8/2.png',
+      '/large/project-8/1.png'
     ]
   },  
   {
