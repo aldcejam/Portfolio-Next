@@ -2,19 +2,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { StyledThumbProject } from "./Styled.ThumbProject";
 import ProjectsModal from "../../partils/ProjectsModal/ProjectsModal";
+import { IProjeto } from "../../ProfileData/InsertedProjectsAndCategoty/TypesProjects/TypesProjects";
 
 interface IStructureForProject {
-    project: {
-        title: string,
-        description: string,
-        projectCategory: string,
-        data: string,
-        client?: string,
-        link: string,
-        technologies: string,
-        imageThumb: string,
-        images: Array<string>
-    }
+    project: IProjeto
 }
 
 const StructureForProject = ({ project }: IStructureForProject) => {
