@@ -12,7 +12,7 @@ import { StyledProjectModal } from "./Styled.ProjectModal";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { IProjeto } from "../../ProfileData/InsertedProjectsAndCategoty/TypesProjects/TypesProjects";
 
-interface TypesProjectsModal extends IProjeto {
+interface TypesProjectsModal {
     project: IProjeto
     projectModalIsOpen: boolean
     ToggleOpenProject: () => void
