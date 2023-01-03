@@ -4,7 +4,8 @@ export interface IProjeto {
     projectCategory: string,
     data: string,
     client?: string,
-    link: string,
+    linkGIT?: string,
+    linkSITE?: string,
     technologies: string,
     imageThumb: string,
     images: Array<string>

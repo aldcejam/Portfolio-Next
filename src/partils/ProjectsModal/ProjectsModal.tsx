@@ -10,19 +10,10 @@ import ComunButton from "../../components/Buttons/ComunButton/ComunButton";
 
 import { StyledProjectModal } from "./Styled.ProjectModal";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { IProjeto } from "../../ProfileData/InsertedProjectsAndCategoty/TypesProjects/TypesProjects";
 
-interface TypesProjectsModal {
-    project: {
-        title: string,
-        description: string,
-        projectCategory: string,
-        data: string,
-        client?: string,
-        link: string,
-        technologies: string,
-        imageThumb: string,
-        images: Array<string>
-    }
+interface TypesProjectsModal extends IProjeto {
+    project: IProjeto
     projectModalIsOpen: boolean
     ToggleOpenProject: () => void
 }
@@ -59,11 +50,17 @@ const ProjectsModal = ({ project, projectModalIsOpen, ToggleOpenProject }: Types
                                 <h2>Informações do projeto</h2>
                                 <h3><span>Data -</span> {project.data}</h3>
                                 <h3><span>Ferramentas - </span>{project.technologies}</h3>
-                                <h3><span>acessar projeto no GitHub -</span><a href={project.link} target="" className="link"> github/project</a></h3>
+                                {
+                                    project.linkGIT &&
+                                    <h3><span>acessar projeto no GitHub -</span><a href={project.linkGIT} target="" className="link"> github/project</a></h3>
+                                }
+                                {project.linkSITE &&
+                                    <h3><span>acessar o site -</span><a href={project.linkSITE} target="__blank" className="link"> SITE</a></h3>
+                                }
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="header">
                         <div className="project-details-toggle-button" onClick={() => ToggleShowDetails()}>
                             <ComunButton
