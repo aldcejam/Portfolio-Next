@@ -9,6 +9,12 @@ export const Skills = [
     'Sass',
     'Material UI',
     'Json',
-    'Motion Framer'
+    'Motion Framer',
+    'Redux',
+    "Jest",
+    "React Testing Library",
+    "Storybook",
+
+
 
 ]
