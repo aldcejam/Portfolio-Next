@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link } from "next/link";
 import MenuBurguer from "../../components/MenuBurguer/MenuBurguer";
 import { StyledHeader, StyledLog } from "./Styled.Header";
+import Link from "next/link";
 
 const Header = () => {
 
