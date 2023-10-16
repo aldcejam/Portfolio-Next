@@ -7,10 +7,7 @@ import ButtonsForColorize from '../components/Buttons/ButtonsForColorize/Buttons
 
 
 
-function MyApp({ Component, pageProps }: AppProps) {
-
-
-
+function MyApp({ Component, pageProps }: AppProps) { 
   return (
     <ThemeContextProvider>
       <StyledGlobal>
