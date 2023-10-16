@@ -52,7 +52,7 @@ const Sobre: NextPage = () => {
                     </div>
                     <div className="informations__cv-and-contact">
                         <div className="cv-and-contact--cv">
-                            <a href="/curriculo-aldcejam.pdf">
+                            <a href="/curriculo-aldcejam-full.pdf">
                                 <ComunButton textButton={'Currículo '} />
                             </a>
                         </div>
