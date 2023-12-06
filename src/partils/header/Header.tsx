@@ -6,14 +6,14 @@ import Link from "next/link";
 const Header = () => {
 
     return (
-        <Link href="/" style={{ cursor: "pointer" }}>
-            <StyledHeader>
-                <StyledLog>
+        <StyledHeader>
+            <Link href="/">
+                <StyledLog  style={{ cursor: "pointer" }}>
                     W
                 </StyledLog>
-                <MenuBurguer />
-            </StyledHeader>
-        </Link>
+            </Link>
+            <MenuBurguer />
+        </StyledHeader>
     )
 }
 

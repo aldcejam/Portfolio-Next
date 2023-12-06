@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <div className='presentation'>
           <span>Olá</span>
           <h1>Me chamo Aldcejam</h1>
-          <h2>e sou desenvolverdor Front-End</h2>
+          <h2>e sou desenvolverdor Full-Stack</h2>
         </div>
 
         <div className='redirect-buttons'>

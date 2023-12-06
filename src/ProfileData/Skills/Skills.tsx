@@ -14,6 +14,12 @@ export const Skills = [
     "Jest",
     "React Testing Library",
     "Storybook",
+    "Java",
+    "Spring Boot",
+    "NodJs",
+    "Express",
+    "postgreSQL",
+    "mySQL",
 
 
 

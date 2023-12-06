@@ -1,7 +1,6 @@
 import { styled } from "@mui/material";
 
-export const StyledPageSobre = styled('div')`
-    user-select: none;
+export const StyledPageSobre = styled('div')` 
     .profile{
         display: flex;
         align-items: flex-start;
@@ -14,6 +13,7 @@ export const StyledPageSobre = styled('div')`
             flex-basis: 100;
             
             .identifiers--profile-pic{
+                user-select: none;
                 width: clamp(240px, 30vw, 340px);
                 height: clamp(240px, 30vw, 340px);
             }

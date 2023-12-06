@@ -16,7 +16,7 @@ const Contato: NextPage = () => {
 
             <div className="container">
                 <CardContact
-                    link="https://api.whatsapp.com/send?phone=55849871992511&text=ol%C3%A1"
+                    link="https://api.whatsapp.com/send?phone=5584987199251&text=ol%C3%A1"
                     icon={<CallIcon />}
                     title="Whatsapp"
                     contact="(84) 987199251"
@@ -28,7 +28,7 @@ const Contato: NextPage = () => {
                     contact="aldcejam.pro@gmail.com"
                 />
                 <CardContact
-                    link="https://www.linkedin.com/in/aldcejam-junior-b87532220/"
+                    link="https://www.linkedin.com/in/aldcejam/"
                     icon={<LinkedInIcon />}
                     title="linkedin"
                     contact="Aldcejam Junior"

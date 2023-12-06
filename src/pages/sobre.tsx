@@ -13,8 +13,7 @@ import ComunButton from "../components/Buttons/ComunButton/ComunButton";
 import { RedirectButton } from "../components/Buttons/RedirectButton/RedirectButton";
 import Formation from "../components/Formation/Formation";
 import { useState } from "react";
-import { Skills } from "../ProfileData/Skills/Skills";
-
+import { Skills } from "../ProfileData/Skills/Skills"; 
 
 const Sobre: NextPage = () => {
 
