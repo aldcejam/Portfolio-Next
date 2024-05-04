@@ -1,6 +1,5 @@
-import { InsertedProjects } from '../Projects/InsertedProjects'
-
-
+import { InsertedProjects } from '../Projects/InsertedProjects' 
+ 
 const categoriesRepeted: any = [];
 const categoriesNoRepeated = InsertedProjects.filter(element => {
   const isDuplicate = categoriesRepeted.includes(element.projectCategory);

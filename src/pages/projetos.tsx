@@ -29,7 +29,7 @@ const Projetos: NextPage = () => {
         </div>
         <div className='projects-by-categorys'>
 
-          <div className='categorys'>
+          {/* <div className='categorys'>
             {
               onlyCategories.map((category) => {
                 return (
@@ -44,12 +44,12 @@ const Projetos: NextPage = () => {
                 )
               })
             }
-          </div>
+          </div> */}
 
           <div className='projects'>
             {
               InsertedProjects.map((projeto) => {
-                if (projeto.projectCategory == categorysSelected || 'todos' == categorysSelected) {
+                if (/* projeto.projectCategory == categorysSelected ||  */'todos' == categorysSelected) {
                   return (
                     <StructureForProject key={projeto.title} project={projeto} />
                   )

@@ -8,7 +8,7 @@ const TextoSobreMim = () => {
             </p>
             <p>
                 <i>
-                Sou desenvolvedor Full-stack e venho estudando programação desde o início do meu curso técnico em informática, há 5 anos. Atualmente, estou matriculado no Bacharelado em Tecnologia da Informação na UFRN, com o objetivo de me tornar um Engenheiro de Software no futuro. Durante minha trajetória acadêmica, explorei diversas linguagens, como Java, Javascript e C, assim como diversos bancos de dados, bibliotecas e frameworks. Ao longo do tempo, especializei-me como desenvolvedor Javascript e Java, e agora concentro meus estudos em design de software e desenvolvimento orientado a testes. Conto com mais de 3 anos de experiência como freelancer em vários projetos para diferentes empresas, embora a maioria não permita a inclusão desses trabalhos em meu portfólio.
+                Desenvolvedor web a mais de 3 anos, possuo vasta experiência em todo o ciclo de vida de um software,  da análise de requitos ao deploy. Minha stack de maior competência é a javascript, porém, meus conhecimentos me permitem trafegar fácilmente entre outras stack sem grandes dificuldades, se for difícil, ótimo, será legal quebrar a cebeça com algo novo.
                 </i>
             </p>
         </>
