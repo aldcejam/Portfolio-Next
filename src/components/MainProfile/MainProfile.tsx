@@ -10,7 +10,9 @@ const MainProfile= ({rounded = false}:typesMainProfile)=>{
     return(
         <StyledMainProfile rounded={rounded.toString()}>
             <div>
-                <Image src={'/profile-pic.png'} layout='fill' />
+            <Image src={'/profile-pic.png'} layout='fill' objectFit="cover" 
+                    alt="Aldcejam"
+                />
             </div>
         </StyledMainProfile>
     )
